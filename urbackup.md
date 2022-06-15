@@ -1,8 +1,8 @@
-How to deploy urbackup on Exoscale to use as backup for Windows and Linux
+# How to deploy urbackup on Exoscale to use as backup for Windows and Linux
 
 Urbackup is an open source, easy to deploy and maintain backup software. It provides an easy web interface to manage your backups.
 
-Prerequisites
+## Prerequisites
 As prerequisites you'll have to:
 "* deploy an small instance based on Ubuntu 20.04
 * Create a security group that opens the following ports for all systems that need to be backed up:
@@ -13,7 +13,7 @@ As prerequisites you'll have to:
 * tcp/55415
 * A DNS for the urbackup server is recommended. The DNS should point to the urbackup server instances public IP. In this guide we use "urb.cldsvc.io" and "www.urb.cldsvc.io" pointing to the public IP of the instance."
 
-Installing urbackup server
+## Installing urbackup server
 SSH into the Ubuntu system
 code 
 sudo add-apt-repository ppa:uroni/urbackup  
@@ -28,10 +28,10 @@ Set a password so the web interface won't be open:
 code
 urbackupsrv reset-admin-pw -p <yourpassword>
 
-Enabling the Webinterface
+## Enabling the Webinterface
 The webinterface will allow easier management and overview over your backups. SSL is highly recommended so it is included into this guide.
   
-Installing and configure apache2 webserver
+#### Installing and configure apache2 webserver
 code
 apt install apache2
 ln -s /usr/share/urbackup/www /var/www/html/urbackup
@@ -68,7 +68,7 @@ systemctl restart apache2
 code
 The urbackup instance should now be available on your DNS entry on HTTPS with a self signed certificate. If this is not the case please review logs and check the configuration before proceeding.
 
-Install SSL certificate
+#### Install SSL certificate
 We use LetsEncrypt to provide a working SSL certificate for your instance
 code
 apt install certbot python3-certbot-apache
@@ -84,14 +84,14 @@ Access your urbackup server on the webinterface
 code
 https://urb.cldsvc.io/urbackup"
 code
-Navigate to the "Settings" page to set the Server URL to your URL including the Server port. In this case it is "https://urb.clsvc.io:55414"
+Navigate to the "Settings" page to set the Server URL to your URL including the Server port. In this case it is "https://urb.clsvc.io"
 
   Screenshot2
   
 
-Install agents & restore
+## Install agents & restore
   
-Linux
+## Linux
 Open the web portal and navigate to "Status" and click on the blue "Add new client" in the lower right corner
 Leave "Add new Internet client/client behind NAT" and give the client a name
 After adding the client you see a page with options how to add your cient. Easiest way is to use the script given in "Install it directly via the terminal"
@@ -117,7 +117,7 @@ After the backup you will also see the system as backed up on the "Status" page:
   
 screenshot 4
   
-Initiate a restore
+#### Initiate a restore
 Create a directory to restore to
 code
 mkdir /heom/restore
@@ -154,14 +154,14 @@ root@pm-urbackup-02:~# urbackupclientctl browse -d root/etc/apache2/sites-availa
 ]
 code
 
-Initiate the restore:
+#### Initiate the restore:
 code
 urbackupclientctl restore-start -d root/etc/apache2/sites-available/urb.cldsvc.io.conf -b last -m /etc/apache2/sites-available/urb.cldsvc.io.conf -t /home/restore/urb.cldsvc.io.conf
 code
 The apache config will be restored into the directory /home/restore/
 
 
-Windows
+## Windows
 
 
 
