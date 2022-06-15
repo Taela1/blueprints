@@ -5,11 +5,11 @@ Urbackup is an open source, easy to deploy and maintain backup software. It prov
 ## Prerequisites
 As prerequisites you'll have to:
 * deploy an small instance based on Ubuntu 20.04
-* Create a security group that opens the following ports for all systems that need to be backed up:
+* Create a security group that opens the following ports for the security group only for all systems that need to be backed up:
   * tcp/55413
   * tcp/55414
   * tcp/55415
-* Add the following ports to be available from the internet:
+* Create a second security group for the urbackup instance only with the following ports open to the internet:
   * tcp/80
   * tcp/443 
 * A DNS for the urbackup server is recommended. The DNS should point to the urbackup server instances public IP. In this guide we use "urb.cldsvc.io" and www.urb.cldsvc.io" pointing to the public IP of the instance."
