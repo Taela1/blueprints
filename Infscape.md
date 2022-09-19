@@ -28,11 +28,12 @@ Create a Bucket in you preferred zone. Note that traffic between Exoscale zones 
 ### Install infscape
 * ssh on the created Debian system
 * Initiate the installation process:
-´´´
+```
 wget https://dl3.infscape.com/images/urbackup-app-10-13.sh && bash urbackup-app-10-13.sh
-
+```
 * Agree to the installation. A password will be shown in the terminal, note this password as it will be used to access the web management interface
 * After a while the appliance will reboot itself. Due to a small bug we need to reboot it again: Navigate to the instance in the Exoscale portal and click on the reboot button
+* You can use the Exoscale console to validate the appliance has the public IP configured
 
 ### Configure Infscape and license
 * Open a browser and navigate to the public IP of the infscape appliance using http: http://<public-ip>/
