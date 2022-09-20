@@ -25,6 +25,8 @@ Create a Bucket in you preferred zone. Note that traffic between Exoscale zones 
 * Create a bucket with a unique name
 * Create an API key restricted to the service SOS and the created bucket. Note down the API key and secret.
 
+![alt text](https://github.com/taela1/blueprints/blob/main/infscape_apikey.png?raw=true)
+
 ### Install infscape
 * ssh on the created Debian system
 * Initiate the installation process:
