@@ -34,16 +34,29 @@ Create a Bucket in you preferred zone. Note that traffic between Exoscale zones 
 wget https://dl3.infscape.com/images/urbackup-app-10-13.sh && bash urbackup-app-10-13.sh
 ```
 * Agree to the installation. A password will be shown in the terminal, note this password as it will be used to access the web management interface
-* After a while the appliance will reboot itself. Due to a small bug we need to reboot it again: Navigate to the instance in the Exoscale portal and click on the reboot button
+
+![alt text](https://github.com/taela1/blueprints/blob/main/infscape_installation.png?raw=true)
+
+* After a while the appliance will reboot itself. Due to a small bug we need to reboot it again: Navigate to the instance in the Exoscale portal and click on the reboot button. The console looks like this uniil the appliance is rebooted
+
+![alt text](https://github.com/taela1/blueprints/blob/main/infscape_nonetwork.png?raw=true)
+
 * You can use the Exoscale console to validate the appliance has the public IP configured
+
+![alt text](https://github.com/taela1/blueprints/blob/main/infscape_network.png?raw=true)
 
 ### Configure Infscape and license
 * Open a browser and navigate to the public IP of the infscape appliance using http: http://<public-ip>/
 * Provide the password generated during installation process
+ 
+![alt text](https://github.com/taela1/blueprints/blob/main/infscape_firstlogin.png?raw=true)
+ 
 * If you do not yet own a license key login at: https://www.infscape.com/. If you just want to start get a free Community Edition license key.
 * If you do not have a UrBackup account register a new one with a valid e-mail address and a password of your choice. This account will be used to access this instance web interface from now on and the e-mail adress will receive event based e-mails (for example if your Infscape appliance is offline)
 * Provide appliance name and license key.
 * Use the public IP or a DNS pointing to the public IP for clients to connect
+ 
+![alt text](https://github.com/taela1/blueprints/blob/main/infscape_register.png?raw=true)
  
 ### Configure HTTPS (optional but highly recommended)
 * You require a DNS entry to enable HTTPS.
