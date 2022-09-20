@@ -35,7 +35,7 @@ wget https://dl3.infscape.com/images/urbackup-app-10-13.sh && bash urbackup-app-
 ```
 * Agree to the installation. A password will be shown in the terminal, note this password as it will be used to access the web management interface
 
-![alt text](https://github.com/taela1/blueprints/blob/main/infscape_installation.png?raw=true)
+![alt text](https://github.com/taela1/blueprints/blob/main/infscape_install.png?raw=true)
 
 * After a while the appliance will reboot itself. Due to a small bug we need to reboot it again: Navigate to the instance in the Exoscale portal and click on the reboot button. The console looks like this uniil the appliance is rebooted
 
@@ -74,15 +74,15 @@ wget https://dl3.infscape.com/images/urbackup-app-10-13.sh && bash urbackup-app-
 * Navigate to the "Status" page
 * Click on the blue "Use system disk as cache and setup cloud storage"
  
- ![alt text](https://github.com/taela1/blueprints/blob/main/infscape_setupsso.png?raw=true)
+ ![alt text](https://github.com/taela1/blueprints/blob/main/infscape_setupsos.png?raw=true)
  
 * Agree and provide cloud storage information
  
-![alt text](https://github.com/taela1/blueprints/blob/main/infscape_detailsso.png?raw=true) 
+![alt text](https://github.com/taela1/blueprints/blob/main/infscape_detailsos.png?raw=true) 
 
 * IMPORTANT: Note down the Cloud storage encryption key and store it safely ! This key is mandatory to decrypt your backups if the appliance is lost
 * Finish by clicking on "Select/Confirm cloud storage"
 * Navigate to "Settings" -> "Storage" to validate the Cloud Storage is used
   
- ![alt text](https://github.com/taela1/blueprints/blob/main/infscape_verifysso.png?raw=true)
+ ![alt text](https://github.com/taela1/blueprints/blob/main/infscape_verifysos.png?raw=true)
 
