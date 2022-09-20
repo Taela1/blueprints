@@ -62,16 +62,27 @@ wget https://dl3.infscape.com/images/urbackup-app-10-13.sh && bash urbackup-app-
 * You require a DNS entry to enable HTTPS.
 * Login with the new password to the appliance
 * navigate to "Settings" -> "System" and click on "Setup SSL/HTTPS"
+ 
+ ![alt text](https://github.com/taela1/blueprints/blob/main/infscape_setupssl.png?raw=true)
+ 
 * Provide the DNS name of the appliance, enable the redirect and accept the Let's Encrypt Subscriber Agreement
 * Click on "Save" to enable HTTPS. The web interface will be unresponsive for about 30 seconds while HTTPS is configured
+ 
+ ![alt text](https://github.com/taela1/blueprints/blob/main/infscape_sslsettings.png?raw=true)
   
 ### Configure Cloud Storage
 * Navigate to the "Status" page
 * Click on the blue "Use system disk as cache and setup cloud storage"
+ 
+ ![alt text](https://github.com/taela1/blueprints/blob/main/infscape_setupsso.png?raw=true)
+ 
 * Agree and provide cloud storage information
+ 
+![alt text](https://github.com/taela1/blueprints/blob/main/infscape_detailsso.png?raw=true) 
+
 * IMPORTANT: Note down the Cloud storage encryption key and store it safely ! This key is mandatory to decrypt your backups if the appliance is lost
 * Finish by clicking on "Select/Confirm cloud storage"
 * Navigate to "Settings" -> "Storage" to validate the Cloud Storage is used
   
-  
+ ![alt text](https://github.com/taela1/blueprints/blob/main/infscape_verifysso.png?raw=true)
 
