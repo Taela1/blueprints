@@ -70,6 +70,15 @@ wget https://dl3.infscape.com/images/urbackup-app-10-13.sh && bash urbackup-app-
  
  ![alt text](https://github.com/taela1/blueprints/blob/main/infscape_sslsettings.png?raw=true)
   
+### Configure Infscape server settings to use SSL for backups (optional but highly recommended)
+* This step is highly recommended but requires SSL so be enabled
+* Navigate to "Settings" -> "Internet"
+* Set "Internet Server name/IP" to "127.0.0.1"
+* Let "Internet Server port" on the preconfigured value of "55415"
+* Set "Connect via HTTP(S) proxy to "<your DNS entry>
+ 
+ ![alt text](https://github.com/taela1/blueprints/blob/main/infscape_serversettings.png?raw=true)
+ 
 ### Configure Cloud Storage
 * Navigate to the "Status" page
 * Click on the blue "Use system disk as cache and setup cloud storage"
