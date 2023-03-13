@@ -86,18 +86,18 @@ The respository is visible in "Backup Repositories" and can be used from Veeam 1
 * access to Veeam 12 Backup&Replication server
 * Configured backup repository with object lock enabled on Exoscale SOS
 
-Open the Veeam backup and Replication console
-Navigate to "Backup Infrastructure"
-Navigate to "Scale-out Repositories"
-Click on "Add Scale-out Repository"
-Give the repository a name
-Add the Performance Tier the backups are initialy written to
-Choose either "Data locality" or "Performance" mode
-Check the "Extend scale-out backup repository capacity with object storage"
-Click on "Choose..." and select the Exoscale SOS based repository
-Configure when backups should be scaled out from the configured Performance Tier to the Scale.Out repository
-We highly recommend enabling encryption of the backups
-Finish the process
+* Open the Veeam backup and Replication console
+* Navigate to "Backup Infrastructure"
+* Navigate to "Scale-out Repositories"
+* Click on "Add Scale-out Repository"
+* Give the repository a name
+* Add the Performance Tier the backups are initialy written to
+* Choose either "Data locality" or "Performance" mode
+* Check the "Extend scale-out backup repository capacity with object storage"
+* Click on "Choose..." and select the Exoscale SOS based repository
+* Configure when backups should be scaled out from the configured Performance Tier to the Scale.Out repository
+* We highly recommend enabling encryption of the backups
+* Finish the process
 
 ## Using Exoscale SOS repository as Performance Tier to backup workloads running on Exoscale or mobe clients over the internet
 
@@ -106,10 +106,10 @@ Finish the process
 * access to potiential systems to be backed up
 * Configured backup repository with object lock enabled on Exoscale SOS
 
-Open the Veeam backup and Replication console
-Navigate to "Home"
-Click on "Backup Job"
-Select the job you want to create
-Note: For Exoscale this is "Windows computer" or "Linux computer"
-Configure the backup job as documented from Veeam 12
-Run the backups
+* Open the Veeam backup and Replication console
+* Navigate to "Home"
+* Click on "Backup Job"
+* Select the job you want to create
+* Note: For Exoscale this is "Windows computer" or "Linux computer"
+* Configure the backup job as documented from Veeam 12
+* Run the backups
