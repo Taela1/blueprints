@@ -80,7 +80,7 @@ The respository is visible in "Backup Repositories" and can be used from Veeam 1
 
 ![alt_text](https://github.com/Taela1/blueprints/blob/main/veeam12/veeam-12-3.png)
 
-## Using Exoscale SOS repository as immutable Scale-out for existing performance tier.
+## Using Exoscale SOS repository as immutable Scale-out for existing performance tier
 
 #### Prerequisites
 * access to Veeam 12 Backup&Replication server
