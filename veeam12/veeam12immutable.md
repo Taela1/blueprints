@@ -1,12 +1,12 @@
 # How to use Exoscale Scalable Object Storage (SOS) with object lock with Veeam for immutable backups
 
-Exoscale SOS with object lock can be used with software products from Veeam to create an immutable, secure and safe backup environment. This can be used to substitute WORM off-site backup achirectures as well as to actively store backups from clients, mobile devices, O365 and workloads running on Exoscale.
+Exoscale SOS with object lock can be used with software products from Veeam to create an immutable, secure and safe backup environment. This can be used to substitute WORM off-site backup architectures as well as to actively store backups from clients, mobile devices, O365 and workloads running on Exoscale.
 
 #### Prerequisites
 As prerequisites you'll have to:
-* have access to Exoscale environment
-* Have an Exoscale API key (unrestricted or restricted to storage)
-* have [s3cmd](https://s3tools.org/s3cmd) installed
+* access to Exoscale environment
+* an Exoscale API key (unrestricted or restricted to storage)
+* [s3cmd](https://s3tools.org/s3cmd) installed
 
 Available Exoscale zones can be found here:
 ``` 
@@ -43,6 +43,7 @@ apt install s3cmd -y
 s3cmd --add-header=x-amz-bucket-object-lock-enabled:true mb s3://$bucket --access_key=$key --secret_key=$secret --host=sos-$zone.exo.io --region=$zone --host-bucket=$bucket.sos-$zone.exo.io
 ```
 Check in the UI that the bucket is created and visible.
+If you used a virtual compute to create the bucket you can now delete the virtual compute and the API key used to create the bucket if it was a dedicated key
 
 # Use cases with Exoscale SOS and Veeam
 
@@ -76,7 +77,7 @@ creating Veeam 12 backup repository on Exoscale SOS to provide a valid endpoint 
 ![alt_text](https://github.com/Taela1/blueprints/blob/main/veeam12/veeam-12-2.png)
 
 * configure as you need and finish the process
-* The respository is visible in "Backup Repositories" and can be used from Veeam 12
+* The respository is visible in "Backup Repositories" and can now be used in Veeam 12
 
 ![alt_text](https://github.com/Taela1/blueprints/blob/main/veeam12/veeam-12-3.png)
 
@@ -96,7 +97,7 @@ creating Veeam 12 backup repository on Exoscale SOS to provide a valid endpoint 
 * Choose either "Data locality" or "Performance" mode
 * Check the "Extend scale-out backup repository capacity with object storage"
 * Click on "Choose..." and select the Exoscale SOS based repository
-* Configure when backups should be scaled out from the configured Performance Tier to the Scale.Out repository
+* Configure when backups should be scaled out from the configured Performance Tier to the Scale-out repository
 * We highly recommend enabling encryption of the backups
 * Finish the process
 
