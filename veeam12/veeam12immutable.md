@@ -42,8 +42,7 @@ apt install s3cmd -y
 
 s3cmd --add-header=x-amz-bucket-object-lock-enabled:true mb s3://$bucket --access_key=$key --secret_key=$secret --host=sos-$zone.exo.io --region=$zone --host-bucket=$bucket.sos-$zone.exo.io
 ```
-Check in the UI that the bucket is created and visible.
-If you used a virtual compute to create the bucket you can now delete the virtual compute and the API key used to create the bucket if it was a dedicated key
+Check in the UI that the bucket is created and visible. If you used a virtual compute to create the bucket you can now delete the virtual compute and the API key used to create the bucket if it was a dedicated key
 
 # Use cases with Exoscale SOS and Veeam
 
