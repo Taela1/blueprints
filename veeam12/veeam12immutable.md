@@ -58,25 +58,25 @@ creating Veeam 12 backup repository on Exoscale SOS to provide a valid endpoint 
 * API key for bucket to use (can be restricted to storage and the bucket to use)
 
 #### Configure exoscale SOS repository in Veeam
-Open the Veeam backup and Replication console
-Navigate to "Backup Infrastructure"
-Navigate to "Backup Respositories"
-Click on "Add Repository"
-Select the last option "Object storage"
-Select the first option "S3 Compatible
-Give the repository a name
-Enter "Service point", "Region" and use the API Key to create credentials for this bucket
+* Open the Veeam backup and Replication console
+* Navigate to "Backup Infrastructure"
+* Navigate to "Backup Respositories"
+* Click on "Add Repository"
+* Select the last option "Object storage"
+* Select the first option "S3 Compatible
+* Give the repository a name
+* Enter "Service point", "Region" and use the API Key to create credentials for this bucket
 
 ![alt_text](https://github.com/Taela1/blueprints/blob/main/veeam12/veeam-12-1.png)
 
-click on Browse and select the bucket
-click on Browse and create a new folder for this process
-check the "Make recent backups immutable for:" box and configure days backups should be immutable
+* click on Browse and select the bucket
+* click on Browse and create a new folder for this process
+* check the "Make recent backups immutable for:" box and configure days backups should be immutable
 
 ![alt_text](https://github.com/Taela1/blueprints/blob/main/veeam12/veeam-12-2.png)
 
-configure as you need and finish the process
-The respository is visible in "Backup Repositories" and can be used from Veeam 12
+* configure as you need and finish the process
+* The respository is visible in "Backup Repositories" and can be used from Veeam 12
 
 ![alt_text](https://github.com/Taela1/blueprints/blob/main/veeam12/veeam-12-3.png)
 
@@ -86,6 +86,7 @@ The respository is visible in "Backup Repositories" and can be used from Veeam 1
 * access to Veeam 12 Backup&Replication server
 * Configured backup repository with object lock enabled on Exoscale SOS
 
+#### Configuration
 * Open the Veeam backup and Replication console
 * Navigate to "Backup Infrastructure"
 * Navigate to "Scale-out Repositories"
@@ -106,6 +107,7 @@ The respository is visible in "Backup Repositories" and can be used from Veeam 1
 * access to potiential systems to be backed up
 * Configured backup repository with object lock enabled on Exoscale SOS
 
+#### Configuration
 * Open the Veeam backup and Replication console
 * Navigate to "Home"
 * Click on "Backup Job"
