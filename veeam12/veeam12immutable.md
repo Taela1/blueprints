@@ -5,7 +5,7 @@ Exoscale SOS with object lock can be used with software products from Veeam to c
 #### Prerequisites
 As prerequisites you'll have to:
 * access to Exoscale environment
-* an Exoscale API key (unrestricted or restricted to storage)
+* an Exoscale API key with an IAM role attached that allows SOS access to 'list-buckets' and all operations on the bucket created to store the backups. More details can be found in our documentation at https://community.exoscale.com/documentation/iam/iam-api-key-roles-policies/
 * [s3cmd](https://s3tools.org/s3cmd) installed
 
 Available Exoscale zones can be found here:
