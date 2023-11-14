@@ -4,6 +4,13 @@ This blueprint can be used to deploy a Infscape Backup appliance on Exoscale and
 
 A full documentation can be found here: https://www.urbackup.org/admin_guide_app.pdf
 
+##Prerequisites
+As prerequisites you have:
+
+* access to Exoscale environment
+* an Exoscale API key with an IAM role attached that allows SOS access to 'list-buckets' and all operations on the bucket created to store the backups. More details can be found in our documentation at https://community.exoscale.com/documentation/iam/iam-api-key-roles-policies/
+* A SOS bucket that matches the name allowed within the IAM role
+
 ##  Installation
 The installation guide is available at: https://www.infscape.com/urbackup-appliance-download/
 Please follow the guide for Install to Cloud Instance
@@ -19,13 +26,6 @@ Create a new instance with the following settings:
 * Debian 10 Bullseye as template
 * at least 4GB RAM (t-shirt medium or higher)
 * at least 50GB disk (required for local caching of backup data chunks before uploading to SOS)
-
-#### Prepare Exoscale SOS bucket and API Key
-Create a Bucket in you preferred zone. Note that traffic between Exoscale zones is free and you can choose a different zone for the bucket as for the infscape appliance to gain Geo redundancy with your backups.
-* Create a bucket with a unique name
-* Create an API key restricted to the service SOS and the created bucket. Note down the API key and secret.
-
-![alt text](https://github.com/taela1/blueprints/blob/main/infscape_apikey.png?raw=true)
 
 ### Install infscape
 * ssh on the created Debian system
