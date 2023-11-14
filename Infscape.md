@@ -4,7 +4,7 @@ This blueprint can be used to deploy a Infscape Backup appliance on Exoscale and
 
 A full documentation can be found here: https://www.urbackup.org/admin_guide_app.pdf
 
-##Prerequisites
+## Prerequisites
 As prerequisites you have:
 
 * access to Exoscale environment
